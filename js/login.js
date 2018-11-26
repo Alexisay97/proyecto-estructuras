@@ -99,7 +99,7 @@ function observador(){
         } else {
           // User is signed out.
           // ...
-          
+         
           
         }
       });
