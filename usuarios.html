@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+    <title>Usuarios</title>
+</head>
+
+<body>
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <!--
+                      Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+                  -->
+            <!-- Cabecera del menu lateral -->
+            <div class="logo">
+                <a href="" class="simple-text logo-mini">
+                    <div class="logo-image-small">
+                        <img src="assets/img/logo-small.png">
+                    </div>
+                </a>
+                <a href="" class="simple-text logo-normal">
+                    SC S.A
+                </a>
+            </div>
+            <!-- Termina cabecera del menu lateral -->
+            <!-- Inicia menu lateral -->
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="">
+                        <a class="nav-link active" href="index.html">
+                            <span data-feather="home"></span>
+                            Dashboard <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cotizacion.html">
+                            <span data-feather="file"></span>
+                            Cotizar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">
+                            <span data-feather="users"></span>
+                            Clientes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">
+                            <span data-feather="shopping-cart"></span>
+                            Productos Y Servicios
+                        </a>
+                    </li>
+                    <li class="nav-item" id="Empleados">
+                        <a class="nav-link" href="vendedores.html">
+                            <span data-feather="user"></span>
+                            Empleados
+                        </a>
+                    </li>
+                    <li class="nav-item active" id="Usuarios">
+                        <a class="nav-link" href="usuarios.html">
+                            <span data-feather="layers"></span>
+                            Usuarios
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Termina menu -->
+        <!-- Inicia menu superior -->
+        <div class="main-panel">
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="#pablo">Sistema de Cotizaciones</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="navbar-nav">
+                            <li class="nav-item btn-rotate dropdown">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                    <p>
+                                        <span class="nc-icon nc-settings-gear-65">Opciones</span>
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Salir</a>
+                                    <a class="dropdown-item" href="#">----</a>
+                                    <a class="dropdown-item" href="#">----</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--termina menu superior-->
+            <!-- Inicia cuerpo del docuemnto -->
+            <div class="content">
+                <div class="">
+                    <div class="card">
+                        <div class="col-mb-12">
+                            <div class="card-header bg-light">Usuarios</div>
+                            <div class="card-body">
+                                <div class="input-group mb-4">
+                                    <div class="">
+                                        <form class="form-inline">
+                                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar"
+                                                aria-label="Search" id="searchTerm" onkeyup="doSearch()">
+                                            <!--button class="btn btn-outline-success my-2 my-sm-0" >Buscar</button onclick="limpiar(),comprobar()"-->
+                                            &nbsp;<button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                                                data-target="#exampleModal"><i class="fa fa-user"></i> Agregar Usuario</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table class="table" id="">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Usuario</th>
+                                                <th>Nombre</th>
+                                                <th>Apellido</th>
+                                                <th>Tipo</th>
+                                                <th>Correo</th>
+                                                <th>Opcion</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tablaEmpleados">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Nuevo Usuario</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form id="formDatos" class="" action="" method="">
+                                                    <div class="formImputs">
+                                                        <div class="form-group">
+                                                            <label for="">Nombres:</label>
+                                                            <input required type="text" class="form-control" id="nomUser"
+                                                                name="nomEmpleado" placeholder="Fredirchk Zooller">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Apellidos:</label>
+                                                            <input type="text" class="form-control" id="apeUser" name="apeEmpleado"
+                                                                required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Tipo de usuario:</label>
+                                                            <select class="form-control" name="cargo" id="cargo"
+                                                                required>
+
+                                                                <option value="1">Limitado(Vendedor)</option>
+                                                                <option value="0">Administrativo</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Nombre de Usuario:</label>
+                                                            <input type="username" class="form-control" id="username"
+                                                                name="username" required pattern="[A-Za-z]{64}" title="No debe contener caracteres especiales . , / $ % ^ *()!">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Correo:</label>
+                                                            <input type="email" class="form-control" id="user" name="email"
+                                                                required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Contraseña:</label>
+                                                            <input type="password" class="form-control" id="passwd"
+                                                                name="passwd" min="6" required pattern=".{6,}" title="La contraseña debe ser mayor a 6 caracteres">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                <input class="btn btn-primary" type="submit" name="btnAdd" id="btnAdd"
+                                                    value="Agregar" onclick="registro()">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notificions Plugin    -->
+    <script src="assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control enter for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
