@@ -141,7 +141,7 @@ function mostrarTabla(){
     var datosArray = snap.val();
     var filaDocumento = "";
     var n=1;
-        
+     console.log("hola");   
     for(var documento in datosArray){
         filaDocumento += "<tr>" +
                             "<td>"+ n +"</td>"+
@@ -232,4 +232,15 @@ function doSearch()
             tableReg.rows[i].style.display = 'none';
         }
     }
+}
+
+function logout(){
+    
+    firebase.auth().signOut().then(function() {
+        var url="login.html";
+            document.location.target = "_blank";
+            document.location.href=url;
+      }).catch(function(error) {
+        console.log(error);
+      });
 }

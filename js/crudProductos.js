@@ -264,3 +264,13 @@ function doSearch()
         }
     }
 }
+function logout(){
+    
+    firebase.auth().signOut().then(function() {
+        var url="login.html";
+            document.location.target = "_blank";
+            document.location.href=url;
+      }).catch(function(error) {
+        console.log(error);
+      });
+}
