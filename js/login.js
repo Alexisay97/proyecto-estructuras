@@ -73,6 +73,7 @@ function ingreso(){
         var errorMessage = error.message;
         console.log("Error:" +errorCode);
         console.log("Error: " +errorMessage);
+        windows.alert("Error: "+errorMessage);
         // ...
       });
 }
