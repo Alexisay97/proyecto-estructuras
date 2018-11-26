@@ -99,9 +99,7 @@ function observador(){
         } else {
           // User is signed out.
           // ...
-          var url="login.html";
-          document.location.target = "_blank";
-          document.location.href=url;
+         
           
         }
       });
