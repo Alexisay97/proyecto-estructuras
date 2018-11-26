@@ -13,7 +13,7 @@
 
 var bd = firebase.database();/* Esta es la referencia hacia la base de datos*/
 var tabla = bd.ref("Clientes");/* a la tabla de los clientes*/
-var productos = bd.ref("Productos"); //tabla productos
+var productos = bd.ref("ProySer"); //tabla productos
 var empleados = bd.ref("Empleados");
 var empleadoID;
 var n = 0; /*variable auxiliar es un contador para no pasarse de 15 productos*/
@@ -31,7 +31,7 @@ productos.once("value", function (snap) {
     var array = snap.val();
     for (var dato in array) {
         var sel1 = document.getElementById("producto");
-        sel1.innerHTML += " <option value='" + dato + "' >" + array[dato].Nombre + " " + array[dato].descripcion + " </option>";
+        sel1.innerHTML += " <option value='" + dato + "' >" + array[dato].name + " " + array[dato].descP + " </option>";
 
     }
 });
@@ -185,4 +185,14 @@ function borrar() {
 
 }
     
-                              
+function logout(){
+    
+    firebase.auth().signOut().then(function() {
+        var url="login.html";
+            document.location.target = "_blank";
+            document.location.href=url;
+      }).catch(function(error) {
+        console.log(error);
+      });
+}
+                             
