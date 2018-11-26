@@ -66,7 +66,7 @@ function agregar1() {
     } else {/*si todo lo demas no se cumple iniciamos a ingresar los tr*/
         var db = firebase.database(); /*volvemos a llamar a la base de datos es redundante pero falta crear variables globales y ahorita funciona asi que no lo quiero tocar*/
         console.log(agregar); /*mensaje para ver el valor del documento que devuelve */
-        var dato = db.ref("Productos").child(agregar); /* aqui lo que hacemos es seleccionar de firebase el id por decirlo asi que contiene agregar*/
+        var dato = db.ref("ProySer").child(agregar); /* aqui lo que hacemos es seleccionar de firebase el id por decirlo asi que contiene agregar*/
 
         if (n == 15) {
 
