@@ -87,7 +87,7 @@ function agregar1() {
 
 
                 cell1.innerHTML = cant; /*Se imprime en el documento con inner en cada celda respectiva*/
-                cell2.innerHTML = array.Nombre + " " + array.descripcion;
+                cell2.innerHTML = array.name + " " + array.descP;
                 cell3.innerHTML = "$ " + array.precio;
                 cell4.innerHTML = array.precio * cant;
                 cell5.innerHTML = "<input type='checkbox' name = 'del'/>"; /* este es el check para eliminar mas adelante*/
